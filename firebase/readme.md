@@ -17,7 +17,7 @@ Il faudrait d'abord avoir une autre collection conversation pour l'organisation 
 ```
 
 ### On pourra après chercher par conversation pour récupérer le dernier message.
-```javacript
+```javascript
 
 const convRef = collection(db, "conversations").where("participants", "array-contains", userId).orderBy("lastMessage.timestamp", "desc");
 const snapshot = await getDocs(convRef);
